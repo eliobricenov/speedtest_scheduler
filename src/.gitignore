@@ -1,8 +1,8 @@
 # IDE
-.idea/*
+../.idea/Daemon.iml
 
 # FILES
 logs.log
 Pipfile.lock
-db.json
+src/db.json
 __pycache__/

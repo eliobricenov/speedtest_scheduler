@@ -1,5 +1,5 @@
 import logging
-from util import get_script_path
+from src.util import get_script_path
 
 
 def get_logger():

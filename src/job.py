@@ -1,7 +1,7 @@
 from crontab import CronTab
 
-from logger import get_logger
-from util import get_script_path
+from src.logger import get_logger
+from src.util import get_script_path
 
 USER = 'elio'
 

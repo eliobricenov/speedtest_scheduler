@@ -2,7 +2,7 @@ import fastdotcom
 import traceback
 import os
 
-from logger import get_logger
+from src.logger import get_logger
 
 EXPECTED_SPEED_MB = 2
 MAX_TRIES_NUMBER = 3
