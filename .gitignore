@@ -1,0 +1,8 @@
+# IDE
+.idea/*
+
+# FILES
+logs.log
+Pipfile.lock
+db.json
+__pycache__/
