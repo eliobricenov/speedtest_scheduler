@@ -1,6 +1,6 @@
 from job import setup_jobs, list_jobs, clean_jobs
 from speedtest import run_test
-from db import SpeedtestService
+from speedtest_service import SpeedtestService
 
 
 def main():
