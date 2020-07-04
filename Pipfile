@@ -10,3 +10,6 @@ tinydb = "*"
 
 [requires]
 python_version = "3.8"
+
+[dev-packages]
+python-dotenv = "*"
