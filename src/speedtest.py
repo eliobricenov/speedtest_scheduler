@@ -2,7 +2,8 @@ import fastdotcom
 import traceback
 import os
 
-from src.logger import get_logger
+from .logger import get_logger
+from .speedtest_service import SpeedtestService
 
 EXPECTED_SPEED_MB = 2
 MAX_TRIES_NUMBER = 3
@@ -10,6 +11,7 @@ MAX_TRIES_NUMBER = 3
 
 def main():
     logger = get_logger()
+    result_service = SpeedtestService()
     result = {}
     logger.info('STARTING SPEED TEST IN PID: {}'.format(os.getpid()))
 
@@ -19,6 +21,8 @@ def main():
         error = traceback.print_exc()
         print('ERROR: {}', error)
         logger.error(error)
+    finally:
+        result_service.create(result)
 
     logger.info('TEST RESULT: {}'.format(result))
 
