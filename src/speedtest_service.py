@@ -1,12 +1,14 @@
-from tinydb import TinyDB, Query
 import datetime
+from tinydb import TinyDB, Query
+from .util import get_script_path
 
 
 class SpeedtestService:
     db = None
-    STORAGE_NAME = 'db.json'
+    STORAGE_NAME = '{}/../db/db.json'.format(get_script_path(__file__))
 
     def __init__(self):
+        print('storage path: {}'.format(self.STORAGE_NAME))
         if self.db is None:
             self.db = TinyDB(self.STORAGE_NAME)
 
